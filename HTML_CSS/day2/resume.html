@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="플랜틴의 백엔드·데이터 엔지니어 이력서">
+  <title>플랜틴의 이력서</title>
+  <link rel="stylesheet" href="resume_style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+</head>
+<body>
+  <nav class="sidebar" aria-label="주요 메뉴">
+    <ul class="sidebar-menu">
+      <li><a class="active" href="#resume">이력서</a></li>
+      <li><a href="#experience">포트폴리오</a></li>
+      <li><a href="#" onclick="window.print(); return false;">PDF 내려받기</a></li>
+    </ul>
+  </nav>
+
+  <main id="resume" class="resume">
+    <header class="resume-header">
+      <div class="header-text">
+        <h1>Plantin</h1>
+        <address class="contact-list">
+          <a href="tel:01042600600">
+            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+            010-4260-0600
+          </a>
+          <a href="mailto:plantin@example.com">
+            <i class="fa-solid fa-at" aria-hidden="true"></i>
+            plantin@example.com
+          </a>
+          <a href="https://github.com/fabxoe" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            플랜틴's GitHub
+          </a>
+        </address>
+      </div>
+      <img class="profile-photo" src="plantin.jpeg" alt="플랜틴 프로필 사진">
+    </header>
+
+    <section id="introduce">
+      <h2>Introduce</h2>
+      <p>
+        전자공학을 전공하고 WAS·DB 서버 모니터링 솔루션을 개발해 온 백엔드 및
+        데이터 엔지니어 플랜틴입니다. 안정적인 데이터 파이프라인과 관측 가능한
+        시스템을 만드는 것을 좋아하며, 운영 현장에서 발견한 문제를 자동화로
+        해결하는 데 관심이 많습니다.<br>
+        현재는 바이오 커뮤니티 활동과 노화 연구 스터디를 병행하며 IT 경험을
+        바이오 데이터 분야로 확장하고 있습니다. 장기적으로는 기술과 생명과학을
+        연결해 건강한 수명 연장에 기여하는 엔지니어가 되고자 합니다.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-group">
+        <h3>Language</h3>
+        <ul class="skill-list">
+          <li>Python</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Framework</h3>
+        <ul class="skill-list">
+          <li>Spring Boot</li>
+          <li>FastAPI</li>
+          <li>Pandas</li>
+          <li>Prometheus</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Database</h3>
+        <ul class="skill-list">
+          <li>Oracle</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Infra</h3>
+        <ul class="skill-list">
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Grafana</li>
+          <li>GitHub Actions</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <article class="experience-item">
+        <header class="experience-header">
+          <h3>모니터랩스</h3>
+          <time datetime="2022-10">2022.10 ~ 현재</time>
+        </header>
+        <p class="role">Backend &amp; Data Engineer <span>엔지니어</span></p>
+        <div class="project">
+          <div class="project-header">
+            <h4>WAS·DB 통합 모니터링 솔루션 개발</h4>
+            <time datetime="2023-04">2023.04 ~ 현재</time>
+          </div>
+          <ul>
+            <li>Java와 Spring Boot 기반 서버 지표 수집 API 설계 및 개발</li>
+            <li>Prometheus·Grafana를 활용한 실시간 장애 탐지 대시보드 구축</li>
+            <li>대용량 DB 지표 조회 쿼리 개선 및 알림 처리 속도 최적화</li>
+          </ul>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <h4>운영 로그 분석 자동화</h4>
+            <time datetime="2022-10">2022.10 ~ 2023.04</time>
+          </div>
+          <ul>
+            <li>Python과 Pandas를 활용한 장애 로그 정제 파이프라인 구축</li>
+            <li>반복 장애 패턴 리포트 자동 생성으로 분석 시간 단축</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <header class="experience-header">
+          <h3>바이오 커뮤니티 프로젝트</h3>
+          <time datetime="2025-01">2025.01 ~ 현재</time>
+        </header>
+        <p class="role">Community Data Contributor <span>사이드 프로젝트</span></p>
+        <div class="project">
+          <div class="project-header">
+            <h4>노화 연구 자료 아카이브 구축</h4>
+            <time datetime="2025-01">2025.01 ~ 현재</time>
+          </div>
+          <ul>
+            <li>약 40명 규모 비공개 노화 연구 모임의 논문·세미나 자료 정리</li>
+            <li>연구 주제와 키워드를 기준으로 탐색 가능한 데이터 구조 설계</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <dl class="history-list">
+        <div>
+          <dt>2017 ~ 2023</dt>
+          <dd>한국대학교 전자공학과</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="awards">
+      <h2>Activities</h2>
+      <dl class="history-list">
+        <div>
+          <dt>2025.06</dt>
+          <dd>노화 생물학 논문 읽기 모임 운영 참여</dd>
+        </div>
+        <div>
+          <dt>2024.11</dt>
+          <dd>바이오 데이터 분석 온라인 과정 수료</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <dl class="history-list">
+        <div>
+          <dt>2024.04</dt>
+          <dd>정보처리기사 (한국산업인력공단)</dd>
+        </div>
+        <div>
+          <dt>2023.09</dt>
+          <dd>리눅스마스터 2급</dd>
+        </div>
+        <div>
+          <dt>2023.05</dt>
+          <dd>SQL 개발자(SQLD)</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>
