@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Binance API를 활용한 실시간 USDT 암호화폐 가격 변동 추적기"
+  >
+  <title>실시간 암호화폐 가격 변동 추적기</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="tracker">
+    <header class="tracker-header">
+      <p class="eyebrow">Binance USDT Market</p>
+      <h1>실시간 암호화폐<br class="mobile-break"> 가격 변동 추적기</h1>
+      <p class="description">1초마다 갱신되는 시장 가격을 확인하고 관심 종목을 저장하세요.</p>
+    </header>
+
+    <section class="controls" aria-label="암호화폐 목록 제어">
+      <div class="tabs" role="tablist" aria-label="종목 보기 방식">
+        <button
+          class="tab active"
+          id="allTab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tickerTable"
+          data-tab="all"
+        >
+          전체보기
+        </button>
+        <button
+          class="tab"
+          id="favoritesTab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tickerTable"
+          data-tab="favorites"
+        >
+          관심항목
+          <span class="favorite-count" id="favoriteCount">0</span>
+        </button>
+      </div>
+
+      <label class="search-box" for="searchInput">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
+        </svg>
+        <span class="sr-only">암호화폐 심볼 검색</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="심볼 검색 (예: BTCUSDT)"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </label>
+    </section>
+
+    <section class="market-card" aria-labelledby="marketStatus">
+      <div class="status-bar">
+        <div class="status-copy">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p id="marketStatus" role="status" aria-live="polite">시장 데이터를 불러오는 중입니다.</p>
+        </div>
+        <p class="updated-at">
+          마지막 갱신
+          <time id="updatedAt">--:--:--</time>
+        </p>
+      </div>
+
+      <div class="table-scroll">
+        <table id="tickerTable">
+          <caption class="sr-only">USDT 암호화폐 실시간 가격 목록</caption>
+          <thead>
+            <tr>
+              <th class="favorite-heading" scope="col">관심</th>
+              <th scope="col">심볼</th>
+              <th class="numeric" scope="col">현재가</th>
+              <th class="numeric" scope="col">24시간 변동률</th>
+              <th class="numeric" scope="col">최고가</th>
+              <th class="numeric" scope="col">최저가</th>
+            </tr>
+          </thead>
+          <tbody id="tickerBody">
+            <tr class="message-row">
+              <td colspan="6">
+                <span class="loader" aria-hidden="true"></span>
+                데이터를 불러오고 있습니다.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>가격 정보 제공: Binance · 투자 판단의 책임은 사용자에게 있습니다.</p>
+    </footer>
+  </main>
+
+  <noscript>이 페이지를 사용하려면 JavaScript를 활성화해주세요.</noscript>
+</body>
+</html>
